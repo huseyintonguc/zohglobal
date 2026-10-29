@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZOH Global | E-Ticaret ve Pazaryeri Büyüme Ajansı</title>
+  <meta name="description" content="ZOH Global ile pazaryerlerinde cironuzu ve karlılığınızı katlayın. 10 kişilik profesyonel kadromuzla mağaza açılışından entegrasyona, e-faturadan aylık büyüme toplantılarına kadar tam kapsamlı e-ticaret danışmanlığı." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(18, 26, 43, 0.7);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary: #2563eb;
+      --primary-glow: #3b82f6;
+      --accent: #10b981;
+      --accent-glow: #34d399;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --whatsapp: #25d366;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(37, 99, 235, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(16, 185, 129, 0.12) 0%, transparent 40%);
+      background-attachment: fixed;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(16px);
+      background: rgba(9, 13, 22, 0.85);
+      border-bottom: 1px solid var(--card-border);
+      z-index: 1000;
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+    .logo {
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      text-decoration: none;
+    }
+    .logo-badge {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #fff;
+    }
+    .btn-nav {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--card-border);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s;
+    }
+    .btn-nav:hover {
+      background: rgba(255, 255, 255, 0.16);
+      transform: translateY(-1px);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 90px 0 70px;
+      text-align: center;
+      position: relative;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(37, 99, 235, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--primary-glow);
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: 3.4rem;
+      line-height: 1.15;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      max-width: 900px;
+      margin: 0 auto 24px;
+    }
+    .hero h1 span.gradient {
+      background: linear-gradient(135deg, #60a5fa 20%, #34d399 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto 36px;
+    }
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #fff;
+      padding: 16px 36px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.5);
+      transition: all 0.25s;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.7);
+    }
+    .btn-whatsapp {
+      background: #25d366;
+      color: #0c331a;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.25s;
+    }
+    .btn-whatsapp:hover {
+      background: #22bf5b;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.4);
+    }
+
+    /* Marketplaces Logo Bar */
+    .marketplaces-strip {
+      padding: 40px 0;
+      border-top: 1px solid var(--card-border);
+      border-bottom: 1px solid var(--card-border);
+      background: rgba(13, 20, 36, 0.5);
+      text-align: center;
+    }
+    .strip-title {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .platforms {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .platform-item {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+    .platform-item:hover {
+      opacity: 1;
+      color: #fff;
+    }
+
+    /* Team Banner */
+    .team-badge-section {
+      padding: 60px 0 20px;
+    }
+    .team-card {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, rgba(16, 185, 129, 0.08) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 20px;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .team-info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    .team-info p {
+      color: var(--text-muted);
+      max-width: 600px;
+      font-size: 1.05rem;
+    }
+    .team-roles {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .role-pill {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--card-border);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #e2e8f0;
+    }
+
+    /* Section Layout */
+    .section {
+      padding: 90px 0;
+    }
+    .section-head {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 60px;
+    }
+    .section-head h2 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      margin-bottom: 16px;
+    }
+    .section-head p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 32px 26px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(59, 130, 246, 0.4);
+      box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.5);
+    }
+    .service-icon {
+      width: 54px;
+      height: 54px;
+      background: rgba(37, 99, 235, 0.15);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-glow);
+      font-size: 1.4rem;
+      margin-bottom: 22px;
+    }
+    .service-card h4 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Workflow Timeline */
+    .workflow-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .step-card {
+      background: rgba(18, 26, 43, 0.4);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 28px;
+      position: relative;
+    }
+    .step-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.08);
+      margin-bottom: 12px;
+    }
+    .step-card h5 {
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+    .step-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Interactive Calculator */
+    .calc-box {
+      background: var(--card-bg);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 20px;
+      padding: 44px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .calc-slider-wrapper {
+      margin: 30px 0;
+    }
+    .calc-slider-wrapper label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .calc-slider {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      outline: none;
+      -webkit-appearance: none;
+    }
+    .calc-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--accent);
+      cursor: pointer;
+      box-shadow: 0 0 12px var(--accent);
+    }
+    .calc-results {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid var(--card-border);
+    }
+    .result-item {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .result-item .val {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-top: 6px;
+    }
+    .result-item .lbl {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(180deg, transparent 0%, rgba(37, 99, 235, 0.15) 100%);
+      padding: 100px 0;
+      text-align: center;
+    }
+    .cta-card {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: var(--card-bg);
+      border-radius: 24px;
+      padding: 60px 30px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-wa {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--whatsapp);
+      color: #fff;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+      z-index: 9999;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+    .floating-wa:hover {
+      transform: scale(1.1);
+      box-shadow: 0 15px 30px rgba(37, 211, 102, 0.6);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.3rem; }
+      .nav-links { display: none; }
+      .calc-results { grid-template-columns: 1fr; }
+      .team-card { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        ZOH GLOBAL
+        <span class="logo-badge">E-Ticaret</span>
+      </a>
+      <div class="nav-links">
+        <a href="#hizmetler">Hizmetlerimiz</a>
+        <a href="#ekip">10 Kişilik Kadro</a>
+        <a href="#surec">Nasıl Çalışıyoruz?</a>
+        <a href="#hesaplayici">Ciro Potansiyeli</a>
+      </div>
+      <a href="https://wa.me/905532285951?text=Merhaba,%20pazaryeri%20danışmanlığı%20hakkında%20bilgi%20almak%20istiyorum." class="btn-nav" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp" style="color: var(--whatsapp);"></i> Hemen İletişime Geç
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-tag">
+        <i class="fas fa-chart-line"></i> Uçtan Uca Pazaryeri Danışmanlığı & Yönetimi
+      </div>
+      <h1>Pazaryerlerinde Cironuzu Katlayın, <br><span class="gradient">Operasyonu Bize Bırakın.</span></h1>
+      <p>
+        Trendyol, Hepsiburada, Amazon ve Çiçeksepeti'nde satışlarınızı artırmak, ürün listelemelerinizi optimize etmek ve tek panelden hatasız operasyon yönetmek için 10 kişilik profesyonel operasyon kadromuz hazır.
+      </p>
+      <div class="hero-actions">
+        <a href="https://wa.me/905532285951?text=Merhaba,%20mağazamı%20büyütmek%20için%20ücretsiz%20analiz%20istiyorum." class="btn-whatsapp" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> WhatsApp ile Başla
+        </a>
+        <a href="#hizmetler" class="btn-primary">
+          Hizmetleri Keşfet <i class="fas fa-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marketplaces Strip -->
+  <div class="marketplaces-strip">
+    <div class="container">
+      <div class="strip-title">Entegre Yönettiğimiz Global ve Yerel Pazaryerleri</div>
+      <div class="platforms">
+        <div class="platform-item"><i class="fas fa-bolt" style="color: #f97316;"></i> Trendyol</div>
+        <div class="platform-item"><i class="fas fa-shopping-bag" style="color: #ea580c;"></i> Hepsiburada</div>
+        <div class="platform-item"><i class="fab fa-amazon" style="color: #fbbf24;"></i> Amazon TR & Global</div>
+        <div class="platform-item"><i class="fas fa-gem" style="color: #ec4899;"></i> Çiçeksepeti</div>
+        <div class="platform-item"><i class="fas fa-globe" style="color: #3b82f6;"></i> WooCommerce / Web</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team Feature -->
+  <section id="ekip" class="team-badge-section">
+    <div class="container">
+      <div class="team-card">
+        <div class="team-info">
+          <h3>Arkanızda 10 Kişilik Dev Profesyonel Kadro</h3>
+          <p>
+            Her markamız için ayrı uzmanlar görev alır. Ürün listelemeden stüdyo görsel tasarımına, entegrasyondan finansal karlılık analizine kadar her aşamada işinin uzmanı bir ekiple çalışırsınız.
+          </p>
+        </div>
+        <div class="team-roles">
+          <span class="role-pill"><i class="fas fa-user-tie"></i> Pazaryeri Kategori Yöneticileri</span>
+          <span class="role-pill"><i class="fas fa-palette"></i> Ürün & Görsel Tasarımcıları</span>
+          <span class="role-pill"><i class="fas fa-code"></i> Entegrasyon ve Yazılım Uzmanları</span>
+          <span class="role-pill"><i class="fas fa-calculator"></i> Karlılık ve Finans Analistleri</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section id="hizmetler" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>360° E-Ticaret ve Büyüme Hizmetlerimiz</h2>
+        <p>Satış öncesi kurulumdan satış sonrası karlılık raporlamasına kadar işletmenizi başarıya taşıyacak her detay ZOH Global güvencesinde.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- 1 -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-store"></i></div>
+          <h4>Mağaza & Ürün Açılışları</h4>
+          <p>Trendyol, Hepsiburada, Amazon ve diğer tüm platformlarda eksiksiz kurumsal mağaza onayları, kategori izinleri ve hızlı ürün varyant açılımları.</p>
+        </div>
+
+        <!-- 2 -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-camera-retro"></i></div>
+          <h4>Görsel & Açıklama Kalitesi</h4>
+          <p>Algoritmaların öne çıkardığı yüksek çözünürlüklü mockup/stüdyo görselleri, zengin ürün açıklamaları ve dönüşüm oranı artıran infografikler.</p>
+        </div>
+
+        <!-- 3 -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-search"></i></div>
+          <h4>SEO & Başlık Optimizasyonu</h4>
+          <p>En çok aranan kelimelerle arama motoru uyumlu ürün başlıkları, etiketler ve filtreleme optimizasyonları ile organik görünürlük artışı.</p>
+        </div>
+
+        <!-- 4 -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+          <h4>Tek Panelden Yönetim</h4>
+          <p>Tüm mağazalarınızı tek ekrandan yöneten entegrasyon sistemlerinin kurulumu: Otomatik stok senkronizasyonu ve merkezi sipariş takibi.</p>
+        </div>
+
+        <!-- 5 -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+          <h4>E-Fatura & E-Arşiv Sistemi</h4>
+          <p>Sipariş anında otomatik e-fatura kesen altyapı entegrasyonu, vergi/fatura şablon kurulumları ve hatasız muhasebe akışı.</p>
+        </div>
+
+        <!-- 6 -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+          <h4>Kampanya & Flaş İndirimler</h4>
+          <p>Pazaryerlerinin özel etkinliklerine, flaş indirimlerine ve kupon kampanyalarına doğru kar marjlarıyla katılım stratejisi.</p>
+        </div>
+
+        <!-- 7 -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+          <h4>Net Karlılık Analizleri</h4>
+          <p>Komisyon, kargo, reklam ve iade maliyetleri düşüldükten sonra cebinize kalan net karı gösteren şeffaf yönetici raporları.</p>
+        </div>
+
+        <!-- 8 -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-handshake"></i></div>
+          <h4>Aylık Büyüme Toplantıları</h4>
+          <p>Her ay düzenli gerçekleştirdiğimiz yönetim toplantılarıyla hedefleri gözden geçirme, yeni ciro bariyerlerini aşma ve aksiyon planlama.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Revenue Estimator -->
+  <section id="hesaplayici" class="section" style="background: rgba(13, 20, 36, 0.4);">
+    <div class="container">
+      <div class="section-head">
+        <h2>Potansiyel Büyümenizi Hesaplayın</h2>
+        <p>Mevcut aylık cironuzu seçin; optimizasyon, doğru kampanya ve entegrasyon yönetimiyle 6 aylık hedef projeksiyonumuzu görün.</p>
+      </div>
+
+      <div class="calc-box">
+        <div class="calc-slider-wrapper">
+          <label>
+            <span>Mevcut Aylık Cironuz:</span>
+            <span id="slider-val" style="color: var(--accent); font-size: 1.3rem;">₺100.000</span>
+          </label>
+          <input type="range" min="20000" max="2000000" step="20000" value="100000" class="calc-slider" id="ciro-range">
+        </div>
+
+        <div class="calc-results">
+          <div class="result-item">
+            <div class="lbl">6 Ay Sonraki Hedef Aylık Ciro</div>
+            <div class="val" id="target-ciro">₺240.000</div>
+          </div>
+          <div class="result-item">
+            <div class="lbl">Tahmini Ek Net Karlılık Artışı</div>
+            <div class="val" id="target-profit">₺35.000+</div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+          <a href="https://wa.me/905532285951?text=Merhaba,%20mağazam%20için%20özel%20büyüme%20projeksiyonu%20çıkarmak%20istiyorum." class="btn-whatsapp" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Bu Hedefi Birlikte Planlayalım
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="surec" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Adım Adım Çalışma Metodumuz</h2>
+        <p>Süreci karmaşıklaştırmadan, net ve ölçülebilir adımlarla yönetiyoruz.</p>
+      </div>
+
+      <div class="workflow-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <h5>Check-up & Analiz</h5>
+          <p>Mevcut mağazalarınız, ürün kaliteleriniz, fiyatlandırmanız ve iade oranlarınız detaylıca taranır.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <h5>Altyapı & Entegrasyon</h5>
+          <p>Tek panel sistemleri, e-fatura modülleri ve tüm pazaryeri API bağlantıları eksiksiz kurulur.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <h5>İçerik & SEO Revizyonu</h5>
+          <p>Görseller profesyonelleştirilir, arama hacmi yüksek kelimelerle başlıklar ve açıklamalar yeniden yazılır.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">04</div>
+          <h5>Büyüme & Aylık Toplantı</h5>
+          <p>Kampanyalar başlatılır, karlılık raporlanır ve her ay yöneticilerle artışlar değerlendirilir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <h2 style="font-size: 2.4rem; margin-bottom: 16px;">E-Ticarette Bir Sonraki Seviyeye Hazır mısınız?</h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px;">
+          10 kişilik profesyonel kadromuzla mağazanızı hemen inceleyelim, eksikleri tespit edip ciro artış planınızı çıkaralım.
+        </p>
+        <a href="https://wa.me/905532285951?text=Merhaba,%20ZOH%20Global%20danışmanlık%20paketleri%20hakkında%20görüşmek%20istiyorum." class="btn-whatsapp" style="font-size: 1.15rem; padding: 18px 42px;" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Doğrudan WhatsApp'tan Yazın
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 ZOH Global E-Ticaret Pazarlama ve Dış Ticaret Ltd. Şti. Tüm Hakları Saklıdır.</p>
+      <p style="margin-top: 8px; font-size: 0.85rem; opacity: 0.6;">zohglobal.com | E-Ticaret & Pazaryeri Çözümleri</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Icon -->
+  <a href="https://wa.me/905532285951?text=Merhaba,%20ZOH%20Global%20e-ticaret%20danışmanlığı%20için%20yazıyorum." class="floating-wa" target="_blank" rel="noopener" aria-label="WhatsApp İletişim">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Script for Dynamic Calculator -->
+  <script>
+    const range = document.getElementById('ciro-range');
+    const sliderVal = document.getElementById('slider-val');
+    const targetCiro = document.getElementById('target-ciro');
+    const targetProfit = document.getElementById('target-profit');
+
+    const formatCurrency = (val) => {
+      return new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'TRY', maximumFractionDigits: 0 }).format(val);
+    };
+
+    range.addEventListener('input', (e) => {
+      const val = parseInt(e.target.value);
+      sliderVal.textContent = formatCurrency(val);
+      
+      // Projeksiyon: 6 ayda %120 - %150 ciro artışı ve net kar projeksiyonu
+      const targetVal = val * 2.3;
+      const profitVal = val * 0.35;
+      
+      targetCiro.textContent = formatCurrency(targetVal);
+      targetProfit.textContent = formatCurrency(profitVal) + '+';
+    });
+  </script>
+</body>
+</html>
